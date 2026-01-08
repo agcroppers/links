@@ -1,12 +1,10 @@
 :root {
-    /* Paleta de Cores baseada na marca */
-    --primary-green: #2E7D32; /* Verde Agro Sólido */
-    --hover-green: #1B5E20;
+    /* Paleta de Cores */
     --text-white: #ffffff;
     --text-gray: #e0e0e0;
     
     /* Variáveis de Layout */
-    --max-width: 480px; /* Largura padrão "Linktree" */
+    --max-width: 480px; 
     --border-radius: 12px;
 }
 
@@ -23,7 +21,7 @@ body {
     display: flex;
     justify-content: center;
     overflow-x: hidden;
-    background-color: #0f1c10; /* Fallback color */
+    background-color: #0f1c10;
 }
 
 /* Fundo com Imagem e Blur */
@@ -34,13 +32,15 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    /* Imagem genérica de Agro de alta qualidade do Unsplash */
+    
+    /* IMAGEM ATUALIZADA AQUI */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
-                url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1770&auto=format&fit=crop');
+                url('https://cdn.jsdelivr.net/gh/agcroppers/links@main/assets/bg.png');
+                
     background-size: cover;
     background-position: center;
     filter: blur(5px);
-    transform: scale(1.05); /* Evita bordas brancas pelo blur */
+    transform: scale(1.05); /* Evita bordas brancas causadas pelo blur */
 }
 
 .container {
@@ -85,20 +85,20 @@ header p {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    flex-grow: 1; /* Empurra o footer para baixo */
+    flex-grow: 1;
 }
 
 .link-card {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centraliza o texto */
     align-items: center;
-    padding: 16px 24px;
+    padding: 18px 24px;
     text-decoration: none;
     color: var(--text-white);
     border-radius: var(--border-radius);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     
-    /* Efeito Glassmorphism Padrão */
+    /* Efeito Glassmorphism Padrão para TODOS */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -109,40 +109,19 @@ header p {
 .card-title {
     font-weight: 500;
     font-size: 1rem;
-}
-
-/* Estilo do Botão Principal (Featured) */
-.link-card.featured {
-    background-color: var(--primary-green);
-    border-color: var(--primary-green);
-    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 /* Interações / Hover */
 .link-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.link-card:active {
-    transform: scale(0.98);
-}
-
-.link-card:not(.featured):hover {
     background: rgba(255, 255, 255, 0.15);
     border-color: rgba(255, 255, 255, 0.4);
 }
 
-.link-card.featured:hover {
-    background-color: var(--hover-green);
-}
-
-/* Ícone de seta (apenas no destaque se quiser, ou em todos) */
-.icon-arrow svg {
-    transition: transform 0.3s ease;
-}
-.link-card:hover .icon-arrow svg {
-    transform: translateX(4px);
+.link-card:active {
+    transform: scale(0.98);
 }
 
 /* --- Rodapé --- */
@@ -151,7 +130,7 @@ header p {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centralizado no mobile por padrão */
+    align-items: center;
     gap: 15px;
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.6);
@@ -171,9 +150,8 @@ header p {
     opacity: 0.8;
 }
 
-/* --- Desktop Layout (Adaptação) --- */
+/* --- Desktop Layout --- */
 @media (min-width: 768px) {
-    /* No Desktop, podemos fixar o social no canto inferior esquerdo conforme referência */
     .footer {
         flex-direction: row;
         justify-content: space-between;
@@ -182,19 +160,18 @@ header p {
         left: 20px;
         right: 20px;
         width: auto;
-        /* O conteúdo do copyright vai para a direita, social para a esquerda */
     }
     
     .copyright {
-        margin-left: auto; /* Empurra para direita */
+        margin-left: auto;
     }
 
     .container {
-        justify-content: center; /* Centraliza verticalmente no desktop */
+        justify-content: center;
     }
 }
 
-/* --- Animações de Entrada --- */
+/* --- Animações --- */
 .animate-up {
     opacity: 0;
     transform: translateY(20px);
