@@ -33,9 +33,9 @@ body {
     height: 100%;
     z-index: -1;
     
-    /* IMAGEM ATUALIZADA AQUI */
+    /* NOVA IMAGEM APLICADA AQUI */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
-                url('https://cdn.jsdelivr.net/gh/agcroppers/links@main/assets/bg.png');
+                url('https://images.weserv.nl/?url=images.unsplash.com/photo-1586771107445-d3ca888129ff&q=80&w=2072&fit=crop');
                 
     background-size: cover;
     background-position: center;
