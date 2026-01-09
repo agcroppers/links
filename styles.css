@@ -33,14 +33,13 @@ body {
     height: 100%;
     z-index: -1;
     
-    /* NOVA IMAGEM APLICADA AQUI */
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
                 url('https://images.weserv.nl/?url=images.unsplash.com/photo-1586771107445-d3ca888129ff&q=80&w=2072&fit=crop');
                 
     background-size: cover;
     background-position: center;
     filter: blur(5px);
-    transform: scale(1.05); /* Evita bordas brancas causadas pelo blur */
+    transform: scale(1.05);
 }
 
 .container {
@@ -90,15 +89,16 @@ header p {
 
 .link-card {
     display: flex;
-    justify-content: center; /* Centraliza o texto */
+    justify-content: center;
     align-items: center;
     padding: 18px 24px;
     text-decoration: none;
     color: var(--text-white);
     border-radius: var(--border-radius);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    gap: 10px; /* Espaço entre texto e badge */
     
-    /* Efeito Glassmorphism Padrão para TODOS */
+    /* Glassmorphism */
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -109,6 +109,25 @@ header p {
 .card-title {
     font-weight: 500;
     font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* ESTILOS NOVOS PARA O DESTAQUE AZUL */
+.text-highlight {
+    color: #29b6f6; /* Azul Ciano Neon */
+    text-shadow: 0 0 15px rgba(41, 182, 246, 0.4);
+    font-weight: 600;
+}
+
+.badge-dev {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(41, 182, 246, 0.15);
+    border: 1px solid rgba(41, 182, 246, 0.4);
+    color: #29b6f6;
     letter-spacing: 0.5px;
 }
 
@@ -182,6 +201,7 @@ header p {
 .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.3s; }
 .delay-4 { animation-delay: 0.4s; }
+.delay-5 { animation-delay: 0.5s; }
 
 @keyframes fadeInUp {
     to {
