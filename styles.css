@@ -112,13 +112,14 @@ header p {
     letter-spacing: 0.5px;
 }
 
-/* ESTILOS NOVOS PARA O DESTAQUE AZUL */
+/* ESTILOS DESTAQUE (Texto Azul) */
 .text-highlight {
     color: #29b6f6; /* Azul Ciano Neon */
     text-shadow: 0 0 15px rgba(41, 182, 246, 0.4);
     font-weight: 600;
 }
 
+/* ESTILOS BADGE (Em Breve) */
 .badge-dev {
     font-size: 0.65rem;
     font-weight: 700;
